@@ -9,6 +9,6 @@ public class KafkaConsumer {
 
     @KafkaListener(topics = "${general.kafka-topic}", groupId = "midas-core-group")
     public void listen(Transaction transaction) {
-        System.out.println("Received transaction - Amount: " + transaction.getAmount());
+        System.out.println(">>> RECEIVED: Amount = " + transaction.getAmount());
     }
 }
